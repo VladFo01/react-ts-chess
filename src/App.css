@@ -1,38 +1,74 @@
-.App {
-  text-align: center;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.board {
+    width: calc(70px * 8);
+    height: calc(70px * 8);
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.cell {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.App-link {
-  color: #61dafb;
+.cell img {
+    width: 55px;
+    height: 55px;
+    position: relative;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.white {
+    background-color: rgb(255, 255, 119);
+}
+
+.black {
+    background-color: rgba(81, 41, 0, 0.551);
+}
+
+.selected {
+    background-color: rgb(131, 201, 224);
+}
+
+.available {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-color: rgb(47, 185, 47);
+}
+
+.isAttacked {
+    background-color: rgb(47, 185, 47);
+}
+
+.title {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.lost {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: calc(50vh - 60px);
+    width: auto;
+    padding: 30px;
+    margin-left: 50px;
+    background-color: lightgray;
 }
